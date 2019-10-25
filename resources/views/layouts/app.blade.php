@@ -322,6 +322,8 @@ if($user_meta['temp_user'] === true){
 
                     <li @if ($route=='history') class="active" @endif><a href="{{ url('/history') }}"> <i
                                     class="fa fa-home"></i> History</a></li>
+                        <li @if ($route=='mynew') class="active" @endif><a href="{{ url('/mynew') }}"> <i
+                                        class="fa fa-home"></i> New </a></li>
                 @endif
             </ul>
         </div><!-- /.container-fluid -->

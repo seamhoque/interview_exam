@@ -184,5 +184,11 @@ class PagesController extends Controller
         return view('auth.friday');
     }
 
+    public function mynew(){
+        $user = User::find(Auth::id());
+        return view('pages.mynew')->with('user', $user);
+
+    }
+
 
 }
