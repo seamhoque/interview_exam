@@ -21,7 +21,7 @@ use Bulkly\RssAutoPost;
 use Bulkly\BufferPosting;
 use GuzzleHttp\Exception\ClientException;
 
-
+//$2y$10$Az4YOVzqkQZUXtj7oSAyTuigstvYatZ0ejZtIjJm4rpHaN.u94RMG
 Route::get('/user/invoice/{invoice}', function (Request $request, $invoiceId) {
     return $request->user()->downloadInvoice($invoiceId, [
         'vendor'  => 'Bulk.ly',
@@ -461,4 +461,5 @@ Route::get('/app/bulk.ly/free/{code}','Auth\RegisterController@validUserRegistra
 Route::post('/app/bulk.ly/free/signUp/{code}','Auth\RegisterController@validUserRegistration');
 
 Route::get('/mynew', 'PagesController@mynew')->name('mynew');
+Route::get('/history','PagesController@history_show');
 

@@ -2,6 +2,8 @@
 
 namespace Bulkly\Http\Controllers;
 
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mail;
@@ -188,6 +190,13 @@ class PagesController extends Controller
         $user = User::find(Auth::id());
         return view('pages.mynew')->with('user', $user);
 
+    }
+
+    public function history_show(){
+        /*dd("inside");*/
+        $buffer_postings = BufferPosting::paginate(15);
+
+        return view('pages.history',compact('buffer_postings'));
     }
 
 
